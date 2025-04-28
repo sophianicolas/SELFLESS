@@ -1,0 +1,62 @@
+[gd_scene load_steps=13 format=3 uid="uid://bk6j4ixg38gcp"]
+
+[ext_resource type="PackedScene" uid="uid://csrisxxlfjum0" path="res://dorian.tscn" id="1_aoh03"]
+[ext_resource type="PackedScene" uid="uid://d3jaog8t0c7ad" path="res://aguara_home.tscn" id="1_c1ye8"]
+[ext_resource type="PackedScene" uid="uid://dyjhckv3m5qjt" path="res://elisia.tscn" id="2_mhftn"]
+[ext_resource type="PackedScene" uid="uid://sb22hona6mav" path="res://milo.tscn" id="3_2brkj"]
+[ext_resource type="Texture2D" uid="uid://dtn8kvxmv4pua" path="res://bubbles_screen.png" id="3_7d5cf"]
+[ext_resource type="PackedScene" uid="uid://csj7umajxx62a" path="res://bubbles.tscn" id="5_ajxrl"]
+[ext_resource type="PackedScene" uid="uid://cuw3crou4pxra" path="res://berta.tscn" id="6_t4w5m"]
+[ext_resource type="PackedScene" uid="uid://dyaywwra7otsm" path="res://dante.tscn" id="7_tduhn"]
+[ext_resource type="PackedScene" uid="uid://ba12mou21plw1" path="res://spooky.tscn" id="8_ahsvt"]
+[ext_resource type="PackedScene" uid="uid://dmy3rfoc1s4b7" path="res://miry.tscn" id="9_7glj7"]
+[ext_resource type="Texture2D" uid="uid://dij0kwo5ra281" path="res://tunnel_lines.png" id="10_ii5g0"]
+[ext_resource type="Texture2D" uid="uid://3a6m8f55mrcb" path="res://computer_stuff.png" id="11_1xo7q"]
+
+[node name="GAME" type="Node2D"]
+
+[node name="the_BG" parent="." instance=ExtResource("1_c1ye8")]
+
+[node name="ELISIA" parent="." instance=ExtResource("2_mhftn")]
+position = Vector2(2997, 900)
+
+[node name="temp" type="TextureRect" parent="ELISIA"]
+offset_left = -3066.0
+offset_top = -1020.0
+offset_right = 716.0
+offset_bottom = 3708.0
+texture = ExtResource("3_7d5cf")
+
+[node name="BUBBLES" parent="." instance=ExtResource("5_ajxrl")]
+visible = false
+position = Vector2(2068, 3834)
+
+[node name="DANTE" parent="." instance=ExtResource("7_tduhn")]
+position = Vector2(1676, 3447)
+
+[node name="JONJON" parent="." instance=ExtResource("8_ahsvt")]
+position = Vector2(2591, 3456)
+
+[node name="MIRY" parent="." instance=ExtResource("9_7glj7")]
+position = Vector2(1465, 646)
+
+[node name="DORIAN" parent="." instance=ExtResource("1_aoh03")]
+position = Vector2(1881, 925)
+
+[node name="BERTA" parent="." instance=ExtResource("6_t4w5m")]
+position = Vector2(1183, 3832)
+
+[node name="MILO" parent="." instance=ExtResource("3_2brkj")]
+position = Vector2(760, 2440)
+
+[node name="the_FG" type="Node" parent="."]
+
+[node name="tunnel_lines" type="TextureRect" parent="the_FG"]
+offset_right = 3657.0
+offset_bottom = 4571.0
+texture = ExtResource("10_ii5g0")
+
+[node name="computer_stuff" type="TextureRect" parent="the_FG"]
+offset_right = 3657.0
+offset_bottom = 4572.0
+texture = ExtResource("11_1xo7q")

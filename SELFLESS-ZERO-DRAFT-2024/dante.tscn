@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://dyaywwra7otsm"]
+
+[ext_resource type="Texture2D" uid="uid://7vlwdfy5ejjj" path="res://dante_walkO.png" id="1_l2mur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sy5xr"]
+size = Vector2(230, 431)
+
+[sub_resource type="Animation" id="Animation_8fj5i"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_el0ku"]
+resource_name = "walk"
+length = 0.36
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0407264, 0.0799499, 0.119648, 0.159701, 0.199292, 0.246829, 0.289627, 0.320797),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rjfvu"]
+_data = {
+"RESET": SubResource("Animation_8fj5i"),
+"walk": SubResource("Animation_el0ku")
+}
+
+[node name="DANTE" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_l2mur")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+visible = false
+position = Vector2(-10, 8.5)
+shape = SubResource("RectangleShape2D_sy5xr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_rjfvu")
+}
