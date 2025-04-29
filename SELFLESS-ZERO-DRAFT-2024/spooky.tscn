@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://ba12mou21plw1"]
+
+[ext_resource type="Texture2D" uid="uid://dg2ym2elg2xtq" path="res://jonjon_walkO.png" id="1_oddmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i51kr"]
+size = Vector2(66, 27)
+
+[sub_resource type="Animation" id="Animation_bjvk0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7fuwv"]
+resource_name = "walk"
+length = 0.36
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0401253, 0.0796113, 0.117532, 0.158693, 0.199752, 0.238818, 0.278855, 0.321326),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_au06r"]
+_data = {
+"RESET": SubResource("Animation_bjvk0"),
+"walk": SubResource("Animation_7fuwv")
+}
+
+[node name="JONJON" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_oddmk")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-37, -67)
+shape = SubResource("RectangleShape2D_i51kr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_au06r")
+}

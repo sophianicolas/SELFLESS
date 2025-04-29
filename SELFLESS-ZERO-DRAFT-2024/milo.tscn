@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://sb22hona6mav"]
+
+[ext_resource type="Texture2D" uid="uid://5yahvaxl5a1b" path="res://milo_walkO.png" id="1_t6iuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3du17"]
+size = Vector2(44, 18)
+
+[sub_resource type="Animation" id="Animation_o10ur"]
+length = 0.001
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_cx0mn"]
+resource_name = "walk"
+length = 0.38
+loop_mode = 1
+step = 0.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0387382, 0.0753091, 0.110255, 0.149535, 0.187189, 0.22972, 0.272977, 0.327969),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_jwmdv"]
+_data = {
+"RESET": SubResource("Animation_o10ur"),
+"walk": SubResource("Animation_cx0mn")
+}
+
+[node name="MILO" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_t6iuy")
+hframes = 5
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-22, 229)
+shape = SubResource("RectangleShape2D_3du17")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_jwmdv")
+}

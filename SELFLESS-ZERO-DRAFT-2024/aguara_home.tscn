@@ -1,0 +1,120 @@
+[gd_scene load_steps=17 format=3 uid="uid://d3jaog8t0c7ad"]
+
+[ext_resource type="Texture2D" uid="uid://dg5xdf83i0xi1" path="res://aguara_house.png" id="1_k5wci"]
+[ext_resource type="Texture2D" uid="uid://dunwaaoarj4s7" path="res://aguara_house_BG.png" id="2_v1e5i"]
+[ext_resource type="Texture2D" uid="uid://bveumws8a77wl" path="res://bb_crib.png" id="3_4yq4i"]
+[ext_resource type="Texture2D" uid="uid://ciqoj1ybhepyr" path="res://music_stand.png" id="3_jv6y0"]
+[ext_resource type="Texture2D" uid="uid://cyh202yokjm3r" path="res://musical_desk_01.png" id="3_kh6pq"]
+[ext_resource type="Texture2D" uid="uid://xc0x0de65pwt" path="res://kitchen_table.png" id="4_hyeln"]
+[ext_resource type="Texture2D" uid="uid://bikayyaelt8pi" path="res://horn.png" id="4_xyanr"]
+[ext_resource type="Texture2D" uid="uid://bwpw8oy8d0mmb" path="res://snacky_table.png" id="5_ofb6j"]
+[ext_resource type="Texture2D" uid="uid://66yr0rko0iha" path="res://contrabass.png" id="5_ysjjm"]
+[ext_resource type="Texture2D" uid="uid://bvpw7tddmtroa" path="res://musical_chair.png" id="6_jkq5h"]
+[ext_resource type="Texture2D" uid="uid://bji4ib6t7o2ti" path="res://yellow_control.png" id="6_scj4y"]
+[ext_resource type="Texture2D" uid="uid://i1ou4sgkwlld" path="res://blue_control.png" id="7_hkgxh"]
+[ext_resource type="Texture2D" uid="uid://bd2y5dyc4ixqy" path="res://purple_control.png" id="8_hrwes"]
+[ext_resource type="Texture2D" uid="uid://q7sh7gs54y1m" path="res://tan_control.png" id="9_12p7i"]
+[ext_resource type="Texture2D" uid="uid://dlcj7c73bs61c" path="res://green_control.png" id="10_if6a6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5rdky"]
+size = Vector2(14, 1022)
+
+[node name="aguara_HOME" type="Node2D"]
+
+[node name="temp_bg" type="TextureRect" parent="."]
+visible = false
+offset_right = 3656.0
+offset_bottom = 4570.0
+texture = ExtResource("1_k5wci")
+metadata/_edit_lock_ = true
+
+[node name="BG" type="TextureRect" parent="."]
+offset_right = 3657.0
+offset_bottom = 4570.0
+texture = ExtResource("2_v1e5i")
+metadata/_edit_lock_ = true
+
+[node name="BOUNDS" type="StaticBody2D" parent="."]
+
+[node name="hall_music_bound" type="CollisionPolygon2D" parent="BOUNDS"]
+polygon = PackedVector2Array(896, 1350, 2411, 1348, 2411, 1425, 2079, 1426, 2079, 2160, 3280, 2160, 3280, 1422, 2814, 1425, 2813, 1347, 3280, 1349, 3284, 287, 3344, 288, 3330, 2206, 2018, 2201, 2014, 1376, 895, 1378)
+
+[node name="bath_bound" type="CollisionShape2D" parent="BOUNDS"]
+position = Vector2(376, 857)
+shape = SubResource("RectangleShape2D_5rdky")
+
+[node name="lab_bound" type="CollisionPolygon2D" parent="BOUNDS"]
+position = Vector2(350, 2250.88)
+polygon = PackedVector2Array(14, -456.875, -12, -456.875, -13, 461.125, 1160, 462.125, 1158, -365.875, 1133, -365.875, 1138, 434.125, 12, 435.125, 13, -456.875)
+
+[node name="MUSIC" type="Node" parent="."]
+
+[node name="musical_desk_01" type="TextureRect" parent="MUSIC"]
+offset_right = 3657.0
+offset_bottom = 4572.0
+texture = ExtResource("3_kh6pq")
+
+[node name="musical_chair" type="TextureRect" parent="MUSIC"]
+offset_right = 3657.0
+offset_bottom = 4571.0
+texture = ExtResource("6_jkq5h")
+
+[node name="music_stand" type="TextureRect" parent="MUSIC"]
+offset_right = 3656.0
+offset_bottom = 4570.0
+texture = ExtResource("3_jv6y0")
+
+[node name="horn_case" type="TextureRect" parent="MUSIC"]
+offset_right = 3656.0
+offset_bottom = 4571.0
+texture = ExtResource("4_xyanr")
+
+[node name="BREAKFAST_&_BED" type="Node2D" parent="."]
+
+[node name="bb_crib" type="TextureRect" parent="BREAKFAST_&_BED"]
+offset_right = 3657.0
+offset_bottom = 4572.0
+texture = ExtResource("3_4yq4i")
+
+[node name="kitchen_table" type="TextureRect" parent="BREAKFAST_&_BED"]
+offset_top = -1.0
+offset_right = 3657.0
+offset_bottom = 4570.0
+texture = ExtResource("4_hyeln")
+
+[node name="LAB" type="Node2D" parent="."]
+
+[node name="contrabass" type="TextureRect" parent="LAB"]
+offset_right = 3657.0
+offset_bottom = 4571.0
+texture = ExtResource("5_ysjjm")
+
+[node name="snacky_table" type="TextureRect" parent="LAB"]
+offset_right = 3656.0
+offset_bottom = 4570.0
+texture = ExtResource("5_ofb6j")
+
+[node name="yellow_control" type="TextureRect" parent="LAB"]
+offset_right = 3656.0
+offset_bottom = 4571.0
+texture = ExtResource("6_scj4y")
+
+[node name="blue_control" type="TextureRect" parent="LAB"]
+offset_right = 3656.0
+offset_bottom = 4571.0
+texture = ExtResource("7_hkgxh")
+
+[node name="purple_control" type="TextureRect" parent="LAB"]
+offset_right = 3656.0
+offset_bottom = 4570.0
+texture = ExtResource("8_hrwes")
+
+[node name="tan_control" type="TextureRect" parent="LAB"]
+offset_right = 3656.0
+offset_bottom = 4570.0
+texture = ExtResource("9_12p7i")
+
+[node name="green_control" type="TextureRect" parent="LAB"]
+offset_right = 3657.0
+offset_bottom = 4571.0
+texture = ExtResource("10_if6a6")

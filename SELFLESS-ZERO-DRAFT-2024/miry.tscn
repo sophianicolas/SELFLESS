@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmy3rfoc1s4b7"]
+
+[ext_resource type="Texture2D" uid="uid://ld2xeqmtik0m" path="res://miry.png" id="1_djmjh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rsd3i"]
+size = Vector2(212, 147)
+
+[node name="MIRY" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_djmjh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(4, 31.5)
+shape = SubResource("RectangleShape2D_rsd3i")

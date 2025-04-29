@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://cuw3crou4pxra"]
+
+[ext_resource type="Texture2D" uid="uid://d0e70m0v0asdo" path="res://berta_walkO.png" id="1_eswis"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mstu0"]
+size = Vector2(50, 86)
+
+[sub_resource type="Animation" id="Animation_iwibp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_7wxr5"]
+resource_name = "walk"
+length = 0.37
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0360676, 0.0671759, 0.100689, 0.141018, 0.18784, 0.231332, 0.279037, 0.340508),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 3, 2, 1, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t4lfi"]
+_data = {
+"RESET": SubResource("Animation_iwibp"),
+"walk": SubResource("Animation_7wxr5")
+}
+
+[node name="BERTA" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_eswis")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-24, 34)
+shape = SubResource("RectangleShape2D_mstu0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+libraries = {
+"": SubResource("AnimationLibrary_t4lfi")
+}
