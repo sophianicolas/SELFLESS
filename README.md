@@ -8,6 +8,8 @@ SELFLESS is an independent role-playing video game for all ages.
 
 It is a passion project I began developing in the spring of 2024 while in college. 
 
+All I have available for now is my first-shot Summer 2024 Demo or "Zero Draft", which can be viewed on the branch SLFL-ZERO-DRAFT.
+
 I’ll be documenting its creation here on my GitHub, Instagram, and Cara! 
 
 Join me in the journey!
