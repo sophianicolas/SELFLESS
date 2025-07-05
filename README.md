@@ -48,3 +48,21 @@ BERTA BULLSEYE 🐶🍵
 
 ??? ?? 🐔🕶️
 - An elusive inventor who betrayed SPY HQ. Believes Bubbles’ cyborg project holds the key to immortality, so he stole part of his lab. He gained the ability to teleport and builds machines that can manipulate darkness. Attempts to REINVENT the WORLD, to become the god who can FIX ALL THINGS.
+
+
+
+>>> WORKING ON: 💪⚙️
+Art:
+- Background Art
+- Character Motion Animations
+
+Code:
+- Literally everything lol
+
+Story:
+- Scene Structure
+- Dialog
+
+Publishing:
+- Readable Github/social media
+- Documentation
