@@ -24,6 +24,7 @@ The player weaves through the STORIES of various characters or SELVES, who each 
 
 Together, they discover a GOODNESS GREATER than the DARKNESS in the world; one that is STRONG enough to even HEAL the darkness within THEMSELVES.
 
+<img width="772" height="577" alt="OFFICIAL_CAST" src="https://github.com/user-attachments/assets/ec4f3537-dbe3-48b7-b151-910b7e1f821e" />
 
 >>> Selves: 
 
