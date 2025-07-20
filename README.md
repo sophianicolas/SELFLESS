@@ -26,7 +26,7 @@ Together, they discover a GOODNESS GREATER than the DARKNESS in the world; one t
 
 
 
-# Selves: 
+# Selves: 🦊🦭🐳🐔🐶🐷
 
 <img width="500" height="500" alt="OFFICIAL_CAST" src="https://github.com/user-attachments/assets/ec4f3537-dbe3-48b7-b151-910b7e1f821e" />
 
