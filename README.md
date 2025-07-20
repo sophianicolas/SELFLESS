@@ -1,6 +1,6 @@
 # SELFLESS
 
->>> Start: 🎮 🏁
+# Start: 🎮 🏁
 
 Welcome to SELFLESS!
 
@@ -16,7 +16,7 @@ Join me in the journey!
 
 
 
->>> Storyline: 📝 🪴
+# Storyline: 📝 🪴
 
 A family of ANIMAL SPIES learn about the TRUE nature of LOVE and SELFLESSNESS as they SAVE the WORLD from a MYSTERIOUS ROBOT system that has the power to manipulate DARKNESS.
 
@@ -24,9 +24,11 @@ The player weaves through the STORIES of various characters or SELVES, who each 
 
 Together, they discover a GOODNESS GREATER than the DARKNESS in the world; one that is STRONG enough to even HEAL the darkness within THEMSELVES.
 
-<img width="772" height="577" alt="OFFICIAL_CAST" src="https://github.com/user-attachments/assets/ec4f3537-dbe3-48b7-b151-910b7e1f821e" />
 
->>> Selves: 
+
+# Selves: 
+
+<img width="500" height="500" alt="OFFICIAL_CAST" src="https://github.com/user-attachments/assets/ec4f3537-dbe3-48b7-b151-910b7e1f821e" />
 
 DURIAN AGUARA 🦊
 - By day, a middle school band teacher. By night, running missions for SPY HQ. Husband to ELISIA, dad to MIRY, uncle to MILO. Reluctantly moved his family back to his hometown to take up a teaching job and be closer to SPY HQ. Afraid to REPEAT the past and is learning what is means to REDEEM it.
@@ -54,7 +56,7 @@ BERTA BULLSEYE 🐶🍵
 
 
 
->>> WORKING ON: 💪⚙️
+# WORKING ON: 💪⚙️
 
 Art:
 - Background Art
